@@ -1,0 +1,4 @@
+Intro a VSC
+    Como elegir temas
+    Como abrir carpetas
+    

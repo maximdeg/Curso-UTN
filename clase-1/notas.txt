@@ -2,5 +2,21 @@ Intro a VSC
     Como elegir temas
     Como abrir carpetas
 
-index.html
-    la parte mas importante al hacer una pagina, la pagina inicial
+HTML
+    index.html
+        la parte mas importante al hacer una pagina, la pagina inicial
+    Anidamiento y identacion
+
+
+GIT
+    git commit -am 'Git add + commit combined'
+    git log         revisa los commandos hechos y por quien
+    git clone       hace una copia de un repositorio determinado
+    SHIFT+Z SHIFT+Z or SHIFT+Z+Z    para salir de un lugar de la terminal de git
+
+SHORTCUTS
+    Ctrl + SHIFT + A    Comentario multilinea
+    Shift + TAB = desindentar
+
+
+

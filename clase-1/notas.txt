@@ -1,4 +1,6 @@
 Intro a VSC
     Como elegir temas
     Como abrir carpetas
-    
+
+index.html
+    la parte mas importante al hacer una pagina, la pagina inicial

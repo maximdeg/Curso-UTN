@@ -1,0 +1,3 @@
+GIT
+    git config --list
+        lista de configuracion

@@ -20,9 +20,16 @@
           minlength="2"
         />
       </div>
+
       <div>
         <label for="password">Escribe la contraseña</label>
-        <input type="password" id="password" placeholder="********" required />
+        <input
+          type="password"
+          id="password"
+          placeholder="********"
+          minlength="8"
+          required
+        />
       </div>
       <!-- SUBMIT BUTTON se pueden usar imagenes -->
       <button type="submit">
@@ -31,8 +38,10 @@
       <!-- SUBMIT BUTTON se puede usar pero funciona mal con traducciones -->
       <input type="submit" value="Confirmar" />
       <!-- Generic button, por estar dentro del formulario se convierte en submit sino especificas el type -->
-      <button type="button">Pepe</button
+      <button type="button">Pepe</button>
+      <!-- REset button -->
       <input type="reset" />
+      <!-- Reset button with custom text -->
       <button type="reset">Empezar devuelta</button>
     </form>
   </body>

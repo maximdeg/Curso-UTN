@@ -8,11 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body style="background-color: grey">
-    <header style="background-color: darkorange">
+  <body
+    style="background-color: rgba(128, 128, 128, 0.479)"
+    style="border-radius: 5rem"
+  >
+    <header style="background-color: rgba(255, 208, 0, 0.795)">
       <h1>Heading 1 in the header</h1>
-      <a href="www.google.com">This is a link on the header</a>
+      <a href="https://www.google.com" target="_blank"
+        >This is a link on the header</a
+      >
     </header>
+    <hr>
+      <!-- inside link to get to another level of the page -->
+      <a href="./index.html#listas">Listas</a>
+    </header>
+
     <main style="background-color: brown">
       <h4>Heading 4 in the main</h4>
       <section>
@@ -20,15 +30,70 @@
         <p title="I'm a tooltip">Paragraph in the section in the main</p>
       </section>
     </main>
-    <div style="background-color: darkgoldenrod">
+
+    <div style="background-color: rgb(184, 11, 11)">
       <img src="mutatis logo.png" alt="logo" width="200" height="200" />
       <p><cite>Mutatis logo 'cite example'</cite> by Mai in 2023</p>
     </div>
-    <aside style="background-color: green">
+
+    <div style="background-color: rgb(157, 255, 0)">
+      <span>This is a span inside a div</span>
+      <p>This is another paragraph</p>
+      <span>Click here ==></span>
+      <button>Click me</button>
+    </div>
+
+    <div id="listas" style="background-color: rgba(255, 208, 0, 0.795)">
+      <h3>Listas</h3>
+      <ul>
+        Lista desordenada
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+
+      <ol>
+        Ordered List
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ol>
+
+      <ul>
+        <li>
+          <h3>Heading 3 in the list</h3>
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <ul>
+              Garbamzo
+              <li>ja</li>
+              <li>jo</li>
+            </ul>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </li>
+        <li>
+          Caca
+          <ul>
+            <li>3</li>
+            <li>2</li>
+            <li>1</li>
+          </ul>
+        </li>
+      </ul>
+      <nav>
+        <a href="./mutatis logo.png" target="_blank\">Photo</a>
+      </nav>
+    </div>
+
+    <aside style="background-color: rgb(128, 0, 0)">
       <h5>Heading 5 in the aside</h5>
       <p style="color: rgb(255, 127, 127)">Paragraph in the aside with color</p>
     </aside>
-    <footer style="background-color: yellow">
+    <footer style="background-color: rgba(255, 208, 0, 0.795)">
       <h4>Heading 4 in the footer</h4>
     </footer>
     <h1>Heading 1 loose in the body</h1>

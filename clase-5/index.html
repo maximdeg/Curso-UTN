@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+  </head>
+  <body>
+    <!-- Etiquita formulario -->
+    <form>
+      <h2>Informacion de usuario</h2>
+      <div>
+        <label for="username">Escribe el nombre de usuario:</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="John Smith"
+          required
+          maxlength="16"
+          minlength="2"
+        />
+      </div>
+
+      <div>
+        <label for="email">Ingresa tu email</label>
+        <input type="email" name="" id="email" placeholder="name@example.com" />
+      </div>
+
+      <div>
+        <label for="password">Escribe la contraseña</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="********"
+          minlength="8"
+          required
+        />
+        <label for="confirmPassword"></label>
+        <input
+          type="password"
+          name=""
+          id="confirmPassword"
+          placeholder="********"
+          minlength="8"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="date"></label>
+        <input type="date" name="" id="date" />
+        <input type="datetime" name="" id="" />
+        <input type="datetime-local" name="" id="" />
+        <input type="time" name="" id="" />
+      </div>
+
+      <div>
+        <label for="message">Input text</label>
+        <textarea name="message" id="message" cols="5" rows="2"></textarea>
+      </div>
+
+      <div>
+        <label for="pais">Selecciona un pais</label>
+        <select name="pais" id="">
+          <option value="ar">Argentina</option>
+          <option value="it">Italia</option>
+          <option value="null" selected disabled>No seleccionado</option>
+        </select>
+      </div>
+
+      <div>
+        <input type="file" name="" id="" />
+      </div>
+
+      <div>
+        <input type="number" name="" id="" max="5" min="0" />
+        <input type="range" name="" id="" value="1" />
+      </div>
+
+      <div>
+        <label for="terms"> Acepto los terminos y condiciones</label>
+        <input type="checkbox" name="terms" id="" />
+      </div>
+
+      <div>
+        <h2>Que te gusta?</h2>
+        <label for="HTML">HTML</label>
+        <input type="checkbox" name="tecnologia-preferida" id="HTML" />
+        <label for="CSS">CSS</label>
+        <input type="checkbox" name="tecnologia-preferida" id="CSS" />
+        <label for="JS">JS</label>
+        <input type="checkbox" name="tecnologia-preferida" id="JS" />
+      </div>
+
+      <!-- SUBMIT BUTTON se pueden usar imagenes -->
+      <button type="submit">
+        Submit <img src="./assets/images/pikachu.jpg" width="20px" alt="" />
+      </button>
+      <!-- SUBMIT BUTTON se puede usar pero funciona mal con traducciones -->
+      <input type="submit" value="Confirmar" />
+      <!-- Generic button, por estar dentro del formulario se convierte en submit sino especificas el type -->
+      <button type="button">Pepe</button>
+      <!-- REset button -->
+      <input type="reset" />
+      <!-- Reset button with custom text -->
+      <button type="reset">Empezar devuelta</button>
+    </form>
+  </body>
+</html>

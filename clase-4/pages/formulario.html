@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+  </head>
+  <body>
+    <!-- Etiquita formulario -->
+    <form>
+      <h2>Informacion de usuario</h2>
+      <div>
+        <label for="username">Escribe el nombre de usuario:</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="John Smith"
+          required
+          maxlength="16"
+          minlength="2"
+        />
+      </div>
+      <div>
+        <label for="password">Escribe la contraseña</label>
+        <input type="password" id="password" placeholder="********" required />
+      </div>
+      <!-- SUBMIT BUTTON se pueden usar imagenes -->
+      <button type="submit">
+        Submit <img src="./assets/images/pikachu.jpg" width="20px" alt="" />
+      </button>
+      <!-- SUBMIT BUTTON se puede usar pero funciona mal con traducciones -->
+      <input type="submit" value="Confirmar" />
+      <!-- Generic button, por estar dentro del formulario se convierte en submit sino especificas el type -->
+      <button type="button">Pepe</button
+      <input type="reset" />
+      <button type="reset">Empezar devuelta</button>
+    </form>
+  </body>
+</html>

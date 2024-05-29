@@ -1,0 +1,22 @@
+h1{
+    color: rgb(84, 71, 71); 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-decoration: underline 1px brown;
+}
+
+.titulo-especial{
+    color: rgb(51, 139, 3); 
+}
+
+.subtitulo{
+    color: blue;
+}
+
+.diferente{
+    color: red;
+}
+
+.subrayado{
+    text-decoration: 1px underline brown;
+}

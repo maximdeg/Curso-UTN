@@ -1,0 +1,19 @@
+/* 
+border: grodor tipo color
+  dotted, dashed, solid, double, inset, outset
+ 
+padding: Espacio que esta del borde hacia dentro  
+  */
+
+.caja {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  margin-top: 200px;
+  margin-left: 300px;
+  border: 10px double black;
+  /* border-left: 5px inset red; */
+  /* padding: 20px; */
+  padding-left: 20px;
+}

@@ -1,0 +1,13 @@
+/* Para usar tamaño rem depende del tamaño predefinido del elemento html 
+por ahora usar px*/
+
+@import url("./font.css");
+
+h1 {
+  font-size: 60px;
+  text-decoration: underline red wavy 2px;
+  letter-spacing: 10px;
+  word-spacing: 10px;
+  line-height: 100px;
+  font-weight: 800;
+}

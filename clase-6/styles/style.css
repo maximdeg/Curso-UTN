@@ -1,0 +1,19 @@
+/* selector universal */
+* {
+  background-color: aqua;
+}
+
+/* definicion de elemento */
+button {
+  color: red;
+}
+
+/* Definicion de clase */
+.especial {
+  color: blue;
+}
+
+/* Definicion de id */
+#btn-super-especial {
+  color: yellowgreen;
+}

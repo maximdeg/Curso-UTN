@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  gap: 80px 40px;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 150px;
+  height: 250px;
+  border-radius: 10px;
+  background-color: chartreuse;
+  border: 1px solid white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: red;
+}

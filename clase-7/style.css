@@ -1,12 +1,26 @@
+/* normalize */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* 
 border: grodor tipo color
   dotted, dashed, solid, double, inset, outset
  
 padding: Espacio que esta del borde hacia dentro  
+   First number is top and bottom, second is left and right, third is if only bottom, fourth if only left
+  
+padding | margin
+propiedad: <para todos los ejes>
+propiedad: <top & bottom> <left & right>
+propiedad: <top> <left & right> <bottom>
+propiedad: <top> <right> <bottom> <left>
   */
 
 .caja {
-  box-sizing: border-box;
   width: 200px;
   height: 200px;
   background-color: blueviolet;
@@ -14,6 +28,64 @@ padding: Espacio que esta del borde hacia dentro
   margin-left: 300px;
   border: 10px double black;
   /* border-left: 5px inset red; */
-  /* padding: 20px; */
-  padding-left: 20px;
+  /* padding: 40px; */
+  /* padding-left: 20px; */
+  padding: 15px 32px 28px 40px;
+  /* box-shadow: <top or bottom> <left or right> <size> <blur> <color>; */
+  box-shadow: 40px 20px 50px 20px black, inset 0px 0px 10px 0px blue;
+}
+
+span {
+  background-color: brown;
+  /* No se usa ni margin ni padding en elementos en inline */
+}
+
+header {
+  background-color: #ffe600;
+  padding: 32px;
+}
+
+header input {
+  width: 344px;
+  padding: 10px 15px;
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+/* Saca el borde cuando hago click en el elemento */
+header input:focus-visible {
+  outline: none;
+  border: 1px solid #3483fa;
+}
+
+header .buscador::placeholder {
+  color: #999999;
+}
+
+a {
+  color: black;
+  background-color: #999999;
+  display: inline-block;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700px;
+  text-decoration: none;
+}
+
+/* 
+es una pseudoclase
+hover: cuando pase el mouse por encima
+ */
+a:hover {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  transition: 500ms ease-in-out;
 }

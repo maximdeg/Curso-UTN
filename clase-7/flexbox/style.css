@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.padre {
+  background-color: red;
+  /* Viewport width */
+  width: 100vw;
+  /* Viewport height */
+  height: 100vh;
+  /* Flexbox es una organizacion unidimensional */
+  display: flex;
+  /* Organiza los elementos en columnas o filas */
+  flex-direction: row;
+  /* Funciona para que los elementos no se superpongan y se adapten a la ventana */
+  flex-wrap: nowrap;
+  /* Espacio entre los elementos */
+  /* gap: 50px; */
+  /* Para que lado alinea los elementos en el eje X */
+  justify-content: space-between;
+  /* space-between para usar el espacio sobrante */
+  /* Para que lado alinea los elementos en el eje Y */
+  align-items: end;
+  padding: 20px;
+}
+
+/* Solo los hijos que son de la clase .padre */
+.padre .hijo {
+  background-color: blue;
+  width: 100px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+/* Solo el primer hijo de la clase .padre */
+.padre .hijo:nth-child(1) {
+  background-color: green;
+}

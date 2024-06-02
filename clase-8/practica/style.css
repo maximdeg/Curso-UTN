@@ -14,9 +14,21 @@
 }
 
 body {
-  justify-content: center;
+  display: flex;
   flex-direction: row;
+  justify-content: center;
   background-color: #f5f5f5;
+}
+
+.color-card-container {
+  display: flex;
+  gap: 50px;
+  width: 1150px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #868686; */
 }
 
 /* COLOR CARD */
@@ -42,6 +54,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; */
+}
+
+.color-card .colors .color {
+  display: flex;
+  align-items: end;
+}
+
+.color-card .colors .color span {
+  color: #e6e6e6;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4px;
+  width: 90px;
+  text-align: center;
+  font-size: 14px;
+  border-top-right-radius: 5px;
+  /* display: none; */
+  opacity: 0;
+}
+
+.color-card .colors .color:hover span {
+  /* display: inline-block; */
+  opacity: 1;
+  transition: 300ms ease-in-out;
 }
 
 .color-card .colors .color:nth-child(1) {
@@ -79,6 +114,10 @@ body {
   padding: 0 10px;
   font-size: 14px;
   font-weight: 400;
+}
+
+.color-card .color-card-controls .btn-like:hover {
+  background-color: var(--border-color);
 }
 
 .color-card .color-card-controls .update {

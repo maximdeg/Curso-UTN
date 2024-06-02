@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #fee600;
+  padding: 32px;
+}
+
+.search-container {
+  width: 344px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-container .search-input {
+  width: 100%;
+  padding: 10px 40px 10px 16px;
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+
+.search-container button {
+  position: absolute;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+  color: #6f6d6d;
+  border-left: 1px #c1c1c1 solid;
+  padding-left: 10px;
+  height: 70%;
+}
+
+header input:focus-visible {
+  outline: none;
+  border: 1px solid #3483fa;
+}
+
+header .search-input::placeholder {
+  color: #999999;
+}
+
+.padre {
+  height: 100vh;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  /* position:relative me ayuda que los hijos puedan usar un position absolute por encima de los otros elementos */
+  position: relative;
+}
+
+.hijo {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: black;
+}
+
+.padre .hijo {
+  width: 150px;
+  height: 150px;
+  background-color: rebeccapurple;
+  border: 3px solid black;
+  z-index: 2; /* para que se superponga, mayor el numero mayor la prioridad */
+}
+/* 
+.padre .hijo:nth-child(2) {
+  position: relative;
+   bottom: 20px; 
+  top: 30px;
+  right: 300px;
+  background-color: red;
+  z-index: 1;
+} 
+*/
+
+.padre .hijo:nth-child(2) {
+  /* position: fixed; */
+  /* position: sticky; */
+  /* position: absolute; */
+  background-color: red;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.wsp {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: pink;
+}

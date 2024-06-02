@@ -14,6 +14,54 @@
   font-family: "DM Sans", sans-serif;
 }
 
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.menu .start-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+}
+
+.language {
+  font-weight: 800;
+}
+
+.menu .list-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  /* Encontre esta opcion, muy util */
+  list-style-type: none;
+  gap: 30px;
+}
+
+li {
+  color: black;
+  font-size: 16px;
+}
+
+/* Estoy seguro que esto no es correcto, pero es lo que se hacer hasta ahora */
+a {
+  text-decoration: none;
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -52,6 +100,13 @@ main {
 .review {
   font-size: 14px;
   line-height: 22px;
+  padding-top: 18px;
+  /* Encontre esto pero no lo entendi bien como funciona */
+  flex: 1 0 auto;
+}
+
+.review p {
+  vertical-align: top;
 }
 
 .link {

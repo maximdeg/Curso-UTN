@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.padre {
+  padding: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: greenyellow;
+  align-items: center;
+  gap: 20px;
+}
+
+.hijo {
+  width: 80vw;
+  height: 200px;
+  background-color: purple;
+  border: 1px solid black;
+}
+
+/* Esta parte siempre abajo de todo, las mediaqueries */
+/* Es una condicional para cuando el ancho sea mayor a 1000px */
+@media screen and (min-width: 1000px) {
+  .padre {
+    background-color: aqua;
+    flex-direction: row;
+  }
+
+  /* No funciona si solo pongo solo el .hijo */
+  .padre .hijo {
+    background-color: blue;
+  }
+}

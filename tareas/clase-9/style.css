@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   max-width: 540px;
-  padding: 0px 16px;
+  padding: 0px 20px;
 }
 
 .security-section .checklist {
@@ -44,23 +44,23 @@
   flex-direction: column;
 }
 
-.checklist ul {
+.security-section .checklist ul {
   list-style-type: none;
 }
 
-.checklist li {
+.security-section .checklist li {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
   font-weight: 400;
 }
 
-.checklist i {
+.security-section .checklist i {
   margin-right: 5px;
   font-weight: 500px;
 }
 
-.checklist h1 {
+.security-section .checklist h1 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -71,7 +71,7 @@
   width: 100%;
 }
 
-.reviews {
+.security-section .reviews {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +82,7 @@
   max-width: 540px;
 }
 
-.reviews .review {
+.security-section .reviews .review {
   background-color: var(--bg-color-secondary);
   display: flex;
   flex-direction: column;
@@ -92,11 +92,11 @@
   width: 100%;
 }
 
-.reviews .review img {
+.security-section .reviews .review img {
   width: 225px;
 }
 
-.reviews .review .btn-arrow {
+.security-section .reviews .review .btn-arrow {
   display: flex;
   justify-content: end;
   border: 1px solid transparent;
@@ -119,12 +119,12 @@
     padding: 0px 30px;
   }
 
-  .pic-list h1 {
+  .security-section .pic-list h1 {
     font-size: 28px;
     font-weight: 700;
   }
 
-  .reviews {
+  .security-section .reviews {
     max-width: 94%;
   }
 }
@@ -141,7 +141,7 @@
     justify-content: space-bet;
   }
 
-  .pic-list h1 {
+  .security-section .pic-list h1 {
     font-size: 36px;
     font-weight: 700;
     line-height: 40px;
@@ -151,7 +151,7 @@
     width: 80%;
   }
 
-  .reviews {
+  .security-section .reviews {
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -166,7 +166,7 @@
     max-width: 1200px;
   }
 
-  .reviews {
+  .security-section .reviews {
     max-width: 1200px;
   }
 }

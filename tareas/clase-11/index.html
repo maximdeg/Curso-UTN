@@ -1,0 +1,135 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios clase 11</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="excercizes">
+      <div class="container age-container">
+        <div class="description-container">
+          <span class="span-description">
+            Ingresa una edad para saber la etapa de tu vida
+          </span>
+        </div>
+        <form action="" class="form">
+          <label for="edad">Edad: </label>
+          <input
+            type="number"
+            name="age-input"
+            id="age-input"
+            placeholder="ej: 32"
+          />
+          <button type="submit" name="submit-age" id="submit-age">
+            Calcular
+          </button>
+          <span class="span-description" name="age-span" id="age-span"> </span>
+        </form>
+      </div>
+
+      <div class="container note-conteiner">
+        <div class="description-container">
+          <span class="description"
+            >Ingresa una nota para saber tu resultado del 1 al 100</span
+          >
+        </div>
+        <form action="" class="form">
+          <label for="note">Nota:</label>
+          <input
+            type="number"
+            name="note-input"
+            id="note-input"
+            placeholder="ej: 87"
+          />
+          <button type="submit" name="submit-note" id="submit-note">
+            Calcular
+          </button>
+          <span class="span-description" name="note-span" id="note-span"></span>
+        </form>
+      </div>
+
+      <div class="container triangle-conteiner">
+        <div class="description-container">
+          <span class="description">
+            Ingresa 3 lados de un triangulo para saber que triangulo es
+          </span>
+        </div>
+        <form action="" class="form">
+          <label for="side-1">Lado 1:</label>
+          <input
+            type="number"
+            name="side-1-input"
+            id="triangle-input-1"
+            placeholder="ej: 5"
+          />
+          <label for="side-2">Lado 2:</label>
+          <input
+            type="number"
+            name="side-2-input"
+            id="triangle-input-2"
+            placeholder="ej: 10"
+          />
+          <label for="side-3">Lado 3:</label>
+          <input
+            type="number"
+            name="side-3-input"
+            id="triangle-input-3"
+            placeholder="ej: 14"
+          />
+          <button type="submit" name="submit-triangle" id="submit-triangle">
+            Calcular
+          </button>
+          <span
+            class="span-description"
+            name="triangle-span"
+            id="triangle-span"
+          ></span>
+        </form>
+      </div>
+
+      <div class="container day-container">
+        <div class="description-container">
+          <span class="description"
+            >Ingresa un numero del 1 al 7 para saber que dia es</span
+          >
+        </div>
+
+        <form action="" class="form">
+          <label for="day">Dia de la semana:</label>
+          <input type="number" name="day" id="input-day" placeholder="ej: 5" />
+          <button type="submit" name="submit-day" id="btn-day">Calcular</button>
+          <span class="span-description" name="span-day" id="span-day"></span>
+        </form>
+      </div>
+
+      <div class="container temperature-container">
+        <div class="description-container">
+          <span class="description"
+            >Ingresa la temperatura para saber que estado de la materia esta el
+            agua</span
+          >
+        </div>
+
+        <form action="" class="form">
+          <label for="temperature">Temperatura:</label>
+          <input
+            type="number"
+            name="temperature"
+            id="input-temperature"
+            placeholder="ej: -27"
+          />
+          <button type="submit" name="submit-temperature" id="btn-temperature">
+            Calcular
+          </button>
+          <span
+            class="span-description"
+            name="span-temperature"
+            id="span-temperature"
+          ></span>
+        </form>
+      </div>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

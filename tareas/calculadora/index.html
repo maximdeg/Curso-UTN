@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaxCalculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header"></header>
+
+    <main class="main">
+      <section class="calculator-section">
+        <div class="calculator-container">
+          <div class="display-container">
+            <span class="output-span" id="output-span"></span>
+            <span class="result-span" id="result-span">Result</span>
+          </div>
+          <div class="buttons-container" id="buttons-container">
+            <div class="operations-row">
+              <div class="operations-container">
+                <button class="buttons operation btn-square" id="btn_clear">
+                  C
+                </button>
+                <button class="buttons operation btn-square" id="btn__division">
+                  /</button
+                ><button
+                  class="buttons operation btn-square"
+                  id="btn__multiplication"
+                >
+                  *</button
+                ><button
+                  class="buttons operation btn-square"
+                  id="btn__subtraction"
+                >
+                  -
+                </button>
+              </div>
+            </div>
+
+            <div class="numbers-container">
+              <div class="numbers-square">
+                <div class="numbers">
+                  <button class="buttons number btn-square" id="btn_7">
+                    7
+                  </button>
+                  <button class="buttons number btn-square" id="btn_8">
+                    8
+                  </button>
+                  <button class="buttons number btn-square" id="btn_9">
+                    9
+                  </button>
+                </div>
+                <div class="numbers">
+                  <button class="buttons number btn-square" id="btn_4">
+                    4
+                  </button>
+                  <button class="buttons number btn-square" id="btn_5">
+                    5
+                  </button>
+                  <button class="buttons number btn-square" id="btn_6">
+                    6
+                  </button>
+                </div>
+                <div class="numbers">
+                  <button class="buttons number btn-square" id="btn_1">
+                    1
+                  </button>
+                  <button class="buttons number btn-square" id="btn_2">
+                    2
+                  </button>
+                  <button class="buttons number btn-square" id="btn_3">
+                    3
+                  </button>
+                </div>
+                <div class="numbers">
+                  <button
+                    class="buttons number btn-horizontal-rectangle"
+                    id="btn_0"
+                  >
+                    0
+                  </button>
+                  <button class="buttons operation btn-square" id="btn_point">
+                    .
+                  </button>
+                </div>
+              </div>
+
+              <div class="operations-column">
+                <div class="plus-point-container">
+                  <button
+                    class="buttons operation btn-vertical-rectangle"
+                    id="btn_plus"
+                  >
+                    +
+                  </button>
+
+                  <button
+                    class="buttons operation btn-vertical-rectangle"
+                    id="btn_equal"
+                  >
+                    =
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

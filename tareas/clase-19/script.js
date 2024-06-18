@@ -8,7 +8,7 @@ let counter = 1;
 const renderCounter = () => {
   spanNums.innerText = counter;
 };
-
+// RENDERS
 const renderButtons = () => {
   btnIncrement.style.display = "initial";
   btnDecrement.style.display = "initial";
@@ -18,7 +18,7 @@ const renderButtons = () => {
 const renderBuyButton = () => {
   btnBuy.style.display = "initial";
 };
-
+// HIDES
 const hideQuantityButtons = () => {
   btnIncrement.style.display = "none";
   btnDecrement.style.display = "none";
@@ -30,7 +30,7 @@ const hideBuyButton = () => {
   btnBuy.style.display = "none";
   renderButtons();
 };
-
+// HANDLERS
 const handlerIncrementCounter = () => {
   counter++;
 
@@ -46,6 +46,7 @@ const handlerDecrementButton = () => {
   }
 };
 
+// LISTENERS
 btnBuy.addEventListener("click", e => {
   e.preventDefault();
 

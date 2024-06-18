@@ -1,4 +1,5 @@
 const btnBuy = document.getElementById("btn-buy");
+const divCounter = document.getElementById("counter-container");
 const btnIncrement = document.getElementById("btn-increment");
 const btnDecrement = document.getElementById("btn-decrement");
 const spanNums = document.getElementById("span-numbers");
@@ -10,19 +11,15 @@ const renderCounter = () => {
 };
 // RENDERS
 const renderButtons = () => {
-  btnIncrement.style.display = "initial";
-  btnDecrement.style.display = "initial";
-  spanNums.style.display = "initial";
+  divCounter.style.display = "flex";
 };
 
 const renderBuyButton = () => {
-  btnBuy.style.display = "initial";
+  btnBuy.style.display = "flex";
 };
 // HIDES
 const hideQuantityButtons = () => {
-  btnIncrement.style.display = "none";
-  btnDecrement.style.display = "none";
-  spanNums.style.display = "none";
+  divCounter.style.display = "none";
 
   renderBuyButton();
 };
@@ -30,6 +27,7 @@ const hideBuyButton = () => {
   btnBuy.style.display = "none";
   renderButtons();
 };
+
 // HANDLERS
 const handlerIncrementCounter = () => {
   counter++;
@@ -47,20 +45,8 @@ const handlerDecrementButton = () => {
 };
 
 // LISTENERS
-btnBuy.addEventListener("click", e => {
-  e.preventDefault();
+btnBuy.addEventListener("click", hideBuyButton);
 
-  hideBuyButton();
-});
+btnIncrement.addEventListener("click", handlerIncrementCounter);
 
-btnIncrement.addEventListener("click", e => {
-  e.preventDefault();
-
-  handlerIncrementCounter();
-});
-
-btnDecrement.addEventListener("click", e => {
-  e.preventDefault();
-
-  handlerDecrementButton();
-});
+btnDecrement.addEventListener("click", handlerDecrementButton);

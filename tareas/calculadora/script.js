@@ -64,7 +64,6 @@ divButtons.addEventListener("click", e => {
     !e.target.textContent.includes("C") &&
     !e.target.textContent.includes("=")
   ) {
-    console.log(e.target.textContent);
     printOutputSpan(e.target);
   }
 });

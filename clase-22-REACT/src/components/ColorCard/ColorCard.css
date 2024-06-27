@@ -1,0 +1,93 @@
+/* COLOR CARD */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.color-card {
+  width: 250px;
+  height: 300px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: white;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.color-card .colors {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.color-card .colors .color {
+  display: flex;
+  align-items: end;
+}
+
+.color-card .colors .color span {
+  color: #e6e6e6;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4px;
+  width: 90px;
+  text-align: center;
+  font-size: 14px;
+  border-top-right-radius: 5px;
+  /* display: none; */
+  opacity: 0;
+}
+
+.color-card .colors .color:hover span {
+  /* display: inline-block; */
+  opacity: 1;
+  transition: 300ms ease-in-out;
+}
+
+.color-card .colors .color:nth-child(1) {
+  height: 40%;
+}
+
+.color-card .colors .color:nth-child(2) {
+  height: 25%;
+}
+
+.color-card .colors .color:nth-child(3) {
+  height: 20%;
+}
+
+.color-card .colors .color:nth-child(4) {
+  height: 15%;
+}
+.color-card .color-card-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-card .color-card-controls .btn-like {
+  height: 38px;
+  display: flex;
+  gap: 5px;
+  background-color: transparent;
+  border: 1px solid #ececec;
+  color: #000000e6;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.color-card .color-card-controls .btn-like:hover {
+  background-color: #ececec;
+}
+
+.color-card .color-card-controls .update {
+  color: #868686;
+  font-size: 13px;
+}

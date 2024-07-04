@@ -5,7 +5,7 @@ import "./ColorCardList.css";
 const ColorCardList = props => {
   return (
     <section className="colors-section">
-      {props.colors.map(color => {
+      {props.colorCards.map(color => {
         return (
           <ColorCard
             colors={color.color}

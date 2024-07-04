@@ -2,7 +2,7 @@ import React from "react";
 import ColorCardList from "./components/ColorCardList/ColorCardList";
 
 function App() {
-  const colors = [
+  const colorCards = [
     {
       color: ["#01204e", "#028391", "#f6dcac", "#feae6f"],
       likes: 28,
@@ -25,8 +25,7 @@ function App() {
     },
   ];
 
-  return <ColorCardList colors={colors} />;
+  return <ColorCardList colorCards={colorCards} />;
 }
 
 export default App;
-

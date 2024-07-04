@@ -3,14 +3,15 @@ import ColorCard from "../ColorCard/ColorCard";
 import "./ColorCardList.css";
 
 const ColorCardList = props => {
+  const colorCards = props.colorCards;
   return (
     <section className="colors-section">
-      {props.colorCards.map(color => {
+      {colorCards.map(colorCard => {
         return (
           <ColorCard
-            colors={color.color}
-            likes={color.likes}
-            fecha={color.fecha}
+            colors={colorCard.colors}
+            likes={colorCard.likes}
+            date={colorCard.date}
           />
         );
       })}

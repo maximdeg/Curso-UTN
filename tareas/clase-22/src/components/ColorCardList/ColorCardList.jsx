@@ -2,8 +2,7 @@ import React from "react";
 import ColorCard from "../ColorCard/ColorCard";
 import "./ColorCardList.css";
 
-const ColorCardList = props => {
-  const colorCards = props.colorCards;
+const ColorCardList = ({ colorCards }) => {
   return (
     <section className="colors-section">
       {colorCards.map(colorCard => {

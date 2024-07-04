@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./ColorCard.css";
 
-const ColorCard = props => {
-  const { colors, likes, date } = props;
+const ColorCard = ({ colors, likes, date }) => {
   let [count, setCount] = useState(0);
 
   return (

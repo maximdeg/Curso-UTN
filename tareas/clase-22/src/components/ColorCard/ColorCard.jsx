@@ -3,14 +3,14 @@ import { useState } from "react";
 import "./ColorCard.css";
 
 const ColorCard = props => {
+  const { colors, likes, date } = props;
   let [count, setCount] = useState(0);
-  const colorCard = props;
 
   return (
     <>
       <div className="color-card">
         <div className="colors">
-          {colorCard.colors.map(color => {
+          {colors.map(color => {
             return (
               <div style={{ backgroundColor: color }} className="color">
                 <span>{color}</span>
@@ -25,9 +25,9 @@ const ColorCard = props => {
             onClick={() => setCount(count => count + 1)}
           >
             <i className="bi bi-heart"></i>
-            {colorCard.likes + count}
+            {likes + count}
           </button>
-          <span className="update"> {colorCard.fecha} </span>
+          <span className="update"> {date} </span>
         </div>
       </div>
     </>

@@ -1,11 +1,10 @@
 import React from "react";
 import "./Navbar.css";
 
-function Navbar(props) {
-  const userData = props.userData;
+function Navbar({ userData }) {
   const data = {
     ES: {
-      btnLoginName: "Logearse",
+      btnLoginName: "Registrarse",
       btnProductName: "Crear Producto",
     },
     EN: {

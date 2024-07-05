@@ -1,0 +1,74 @@
+.typing-section {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  position: sticky;
+  height: 70px;
+  width: 100%;
+}
+
+.typing-section .input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  gap: 10px;
+  box-shadow: -3px -3px 10px rgb(0, 0, 0, 0.2);
+  background-color: #f0f2f5;
+}
+
+.typing-section .input-container .text-input {
+  text-align: middle;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 18px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.typing-section .input-container .btn-emoji {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f0f2f5;
+  font-size: 25px;
+  color: grey;
+  cursor: pointer;
+}
+.typing-section .input-container .btn-plus {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f0f2f5;
+  font-size: 40px;
+  color: grey;
+  cursor: pointer;
+}
+
+.typing-section .input-container .btn-send {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #f0f2f5;
+  font-size: 25px;
+  color: grey;
+  cursor: pointer;
+}
+
+.typing-section .input-container .btn-mic {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #f0f2f5;
+  font-size: 25px;
+  color: grey;
+  cursor: pointer;
+}

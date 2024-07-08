@@ -1,0 +1,29 @@
+.message-section {
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+    height: 100%;
+    width: 80%;
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.message-section .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+/* 
+.container
+  width 400px
+  margin 0 auto
+  border solid 1px #ccc
+  border-radius 5px
+  overflow hidden
+  
+.chat-container
+  height 400px
+  overflow auto
+  transform rotate(180deg)
+  direction rtl */

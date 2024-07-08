@@ -13,7 +13,7 @@ const TextInput = () => {
         </button>
         <textarea
           className="text-input"
-          placeHolder="Aca va el texto"
+          placeholder="Aca va el texto"
           name="message"
         />
 

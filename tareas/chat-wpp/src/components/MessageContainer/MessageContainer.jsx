@@ -14,7 +14,7 @@ function MessageContainer({ message }) {
       <div
         className="message-author"
         style={
-          message.author === "yo" ? { color: "#128c7e" } : { color: "#25d366" }
+          message.author === "yo" ? { color: "#53bdeb" } : { color: "#25d366" }
         }
       >
         <span>{message.author}</span>
@@ -24,7 +24,13 @@ function MessageContainer({ message }) {
       </div>
       <div className="message-info">
         <span>{message.date}</span>
-        <span>{message.state}</span>
+        <span>
+          {message.state === "visto" ? (
+            <i className="bi bi-check-all"></i>
+          ) : (
+            <i className="bi bi-check2"></i>
+          )}
+        </span>
       </div>
     </div>
   );

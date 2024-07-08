@@ -1,57 +1,60 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
 
 .header {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  position: sticky;
-  padding: 10px;
-  height: 70px;
-  width: 100%;
-  gap: 5px;
-  box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
-  background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* position: fixed; */
+    width: 100vw;
+    padding: 10px;
+    height: 70px;
+    gap: 10px;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
+    background-color: #f0f2f5;
 }
 
 .header .header-button-go-back {
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: #f0f2f5;
-  font-size: 30px;
-  color: black;
-  cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #f0f2f5;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
 }
 
 .header .header-user-picture {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-image: url("../../images/pic.jpg");
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../../images/pic.jpg);
+    background-size: cover;
 }
 
 .header .header-section-name {
-  display: flex;
-  flex-direction: column;
-  align-items: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
 }
 
 .header .header-section-name .span-name {
-  font-size: 20px;
+    font-size: 20px;
 }
 
-.header .header-section-name .span-description {
-  font-size: 14px;
+.header .header-section-name .span-status {
+    font-size: 14px;
+}
+
+.header .header-section-options {
+    display: flex;
 }
 
 .header .header-button-options {
-  display: flex;
-  justify-content: end;
-  width: 30px;
-  height: 30px;
-  border: none;
-  font-size: 30px;
-  color: grey;
-  cursor: pointer;
-  background-color: #f0f2f5;
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-size: 30px;
+    color: grey;
+    cursor: pointer;
+    background-color: #f0f2f5;
 }

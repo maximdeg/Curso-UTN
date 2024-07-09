@@ -16,11 +16,11 @@ function Header() {
                 <span className="span-name">Pepe</span>
                 <span className="span-status">Online</span>
             </div>
-            <div className="header-section-options">
+            {/* <div className="header-section-options">
                 <button className="header-button-options">
                     <i className="bi bi-three-dots-vertical"></i>
                 </button>
-            </div>
+            </div> */}
         </section>
     );
 }

@@ -1,7 +1,6 @@
 .message-section {
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; */
     height: 100%;
     width: 80%;
     padding: 20px;
@@ -12,7 +11,11 @@
 .message-section .chat-container {
     display: flex;
     flex-direction: column;
+    justify-content: end;
+    overflow: auto;
+    gap: 20px;
     height: 100%;
+    padding-bottom: 60px;
 }
 /* 
 .container

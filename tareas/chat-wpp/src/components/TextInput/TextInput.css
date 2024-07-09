@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: row;
     align-items: end;
-    /* position: fixed;
-  left: 0;
-  bottom: 0; */
+    position: fixed;
+    left: 0;
+    bottom: 0;
     height: 70px;
     width: 100%;
 }

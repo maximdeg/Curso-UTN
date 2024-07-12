@@ -1,0 +1,13 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.colors-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: initial;
+    justify-content: initial;
+}

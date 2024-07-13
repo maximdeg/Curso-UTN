@@ -4,9 +4,19 @@
     /* width: 40%; */
     padding: 5px 20px;
     gap: 5px;
-    border-radius: 20px 20px 20px 0;
-    background-color: #d9fdd3;
     box-shadow: -3px 3px 10px rgb(0, 0, 0, 0.2);
+}
+
+.right {
+    align-self: flex-end;
+    border-radius: 20px 20px 0px 20px;
+    background-color: var(--bg-message-color-right);
+}
+
+.left {
+    align-self: flex-start;
+    border-radius: 20px 20px 20px 0px;
+    background-color: var(--bg-message-color-left);
 }
 
 .message-section .message-container .message-author {
@@ -17,12 +27,14 @@
 
 .message-section .message-container .message-content {
     font-size: 17px;
+    color: var(--text-color);
 }
 
 .message-section .message-container .message-info {
     display: flex;
     justify-content: end;
     align-items: center;
+    color: var(--text-color);
     gap: 8px;
     font-size: 12px;
 }

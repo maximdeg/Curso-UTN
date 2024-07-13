@@ -1,4 +1,4 @@
-@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 .header {
     display: flex;
@@ -10,16 +10,16 @@
     height: 70px;
     gap: 10px;
     box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
-    background-color: #f0f2f5;
+    background-color: var(--bg-color);
 }
 
 .header .header-button-go-back {
     width: 40px;
     height: 40px;
     border: none;
-    background-color: #f0f2f5;
+    background-color: var(--bg-color);
     font-size: 30px;
-    color: black;
+    color: var(--icon-color);
     cursor: pointer;
 }
 
@@ -37,17 +37,15 @@
 }
 
 .header .header-section-name .span-name {
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .header .header-section-name .span-status {
     font-size: 14px;
-}
-
-.header .header-section-options {
-    display: flex;
-    align-items: end;
-    justify-content: end;
+    font-weight: 300;
+    color: var(--text-color);
 }
 
 .header .header-button-options {
@@ -55,7 +53,7 @@
     height: 30px;
     border: none;
     font-size: 30px;
-    color: grey;
+    color: var(--icon-color);
     cursor: pointer;
-    background-color: #f0f2f5;
+    background-color: var(--bg-color);
 }

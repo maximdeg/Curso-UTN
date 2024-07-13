@@ -1,5 +1,5 @@
-import React from 'react';
-import './Header.css';
+import React from "react";
+import "./Header.css";
 
 function Header() {
     return (
@@ -16,11 +16,9 @@ function Header() {
                 <span className="span-name">Pepe</span>
                 <span className="span-status">Online</span>
             </div>
-            {/* <div className="header-section-options">
-                <button className="header-button-options">
-                    <i className="bi bi-three-dots-vertical"></i>
-                </button>
-            </div> */}
+            {/* <button className="header-button-options">
+                <i className="bi bi-three-dots-vertical"></i>
+            </button> */}
         </section>
     );
 }

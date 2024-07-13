@@ -1,13 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+:root {
+    --bg-color: #202c33;
+    --text-color: white;
+    --bg-input-color: #2a3942;
+    --bg-message-color-left: #202c33;
+    --bg-message-color-right: #005c4b;
+    --icon-color: white;
+}
+
 * {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-  display: flex;
-  background-image: url("./images/background.png");
+    display: flex;
+    background-image: url("./images/background-black.jpg");
 }

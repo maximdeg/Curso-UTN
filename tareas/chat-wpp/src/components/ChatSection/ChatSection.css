@@ -1,32 +1,37 @@
 .message-section {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
     height: 100%;
     width: 80%;
-    padding: 20px;
+    padding: 10px;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
+    margin-top: 70px;
 }
 
 .message-section .chat-container {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    overflow: auto;
-    gap: 20px;
+    justify-content: initial;
+    gap: 10px;
     height: 100%;
-    padding-bottom: 60px;
 }
-/* 
-.container
-  width 400px
-  margin 0 auto
-  border solid 1px #ccc
-  border-radius 5px
-  overflow hidden
-  
-.chat-container
-  height 400px
-  overflow auto
-  transform rotate(180deg)
-  direction rtl */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--bg-message-color-right);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-color);
+}

@@ -10,21 +10,14 @@ function MessageContainer({ message }) {
                     : "message-container left"
             }
         >
-            <div
-                className="message-author"
-                style={
-                    message.author === "yo"
-                        ? { color: "#53bdeb" }
-                        : { color: "#25d366" }
-                }
-            >
+            <div className="message-author">
                 <span>{message.author}</span>
             </div>
             <div className="message-content">
                 <span>{message.content}</span>
             </div>
             <div className="message-info">
-                <span>{message.date}</span>
+                <span>{message.time}</span>
                 <span>
                     {message.state === "visto" ? (
                         <i className="bi bi-check-all"></i>

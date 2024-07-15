@@ -1,16 +1,24 @@
-import React from 'react';
-import Header from '../Header/Header';
-import Messages from '../ChatSection/ChatSection';
-import TextInput from '../TextInput/TextInput';
-import { DATA_MOOK as messageList } from '../../../data';
+import React, { useState } from "react";
+import Header from "../Header/Header";
+import ChatSection from "../ChatSection/ChatSection";
+import TextInput from "../TextInput/TextInput";
+import { DATA_MOOK as messageList } from "../../../data";
 
-import './Handler.css';
+import "./Handler.css";
 function Handler() {
+    const [newMessageList, setNewMessageList] = useState(messageList);
+
+    const handleSubmit = (e, formValues) => {
+        e.preventDefault();
+        console.log("Sent", formValues);
+        setNewMessageList([...newMessageList, formValues]);
+    };
+
     return (
         <section className="chat-section">
             <Header />
-            <Messages messageList={messageList} />
-            <TextInput />
+            <ChatSection messageList={newMessageList} />
+            <TextInput handleSubmit={handleSubmit} lastId={newMessageList.length} />
         </section>
     );
 }

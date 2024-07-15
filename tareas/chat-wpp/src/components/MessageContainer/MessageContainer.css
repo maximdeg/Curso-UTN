@@ -13,6 +13,14 @@
     background-color: var(--bg-message-color-right);
 }
 
+.right .message-author{
+    color: #53bdeb;
+}
+
+.left .message-author{
+    color: #25d366;
+}
+
 .left {
     align-self: flex-start;
     border-radius: 20px 20px 20px 0px;

@@ -19,10 +19,12 @@ function MessageContainer({ message }) {
             <div className="message-info">
                 <span>{message.time}</span>
                 <span>
-                    {message.state === "visto" ? (
+                    {message.state === "seen" ? (
                         <i className="bi bi-check-all"></i>
-                    ) : (
+                    ) : message.state === "delivered" ? (
                         <i className="bi bi-check2"></i>
+                    ) : (
+                        <i className="bi bi-clock"></i>
                     )}
                 </span>
             </div>

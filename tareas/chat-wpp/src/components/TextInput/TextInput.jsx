@@ -6,8 +6,8 @@ const TextInput = ({ handleSubmit, lastId }) => {
         author: "yo",
         content: "",
         date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString(),
-        state: "no-entregado",
+        time: new Date().getHours() + ":" + new Date().getMinutes(),
+        state: "not-delivered",
         id: lastId + 1,
     };
 
@@ -21,7 +21,7 @@ const TextInput = ({ handleSubmit, lastId }) => {
     const handleClearInput = () => {
         setTimeout(() => {
             setMsgValues(initialState);
-        }, 100);
+        }, 50);
     };
 
     return (

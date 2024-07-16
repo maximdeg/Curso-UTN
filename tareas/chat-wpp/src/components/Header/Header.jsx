@@ -10,7 +10,7 @@ function Header() {
                 </button>
             </div>
             <div className="header-user-picture">
-                <img className="user-pic" src="./images/pic.jpg" alt="" />
+                {/* <img className="user-pic" src="/images/pic.jpg" alt="" /> */}
             </div>
             <div className="header-section-name">
                 <span className="span-name">Pepe</span>

@@ -19,9 +19,7 @@ const TextInput = ({ handleSubmit, lastId }) => {
     };
 
     const handleClearInput = () => {
-        setTimeout(() => {
-            setMsgValues(initialState);
-        }, 50);
+        setMsgValues(initialState);
     };
 
     return (
@@ -35,7 +33,10 @@ const TextInput = ({ handleSubmit, lastId }) => {
                 </button>
                 <form
                     className="text-form"
-                    onSubmit={(e) => handleSubmit(e, { ...msgValues })}
+                    onSubmit={(e) => {
+                        handleSubmit(e, { ...msgValues });
+                        handleClearInput();
+                    }}
                 >
                     <input
                         className="text-input"
@@ -48,11 +49,7 @@ const TextInput = ({ handleSubmit, lastId }) => {
                         required
                     />
 
-                    <button
-                        className="btn-send"
-                        type="submit"
-                        onClick={handleClearInput}
-                    >
+                    <button className="btn-send" type="submit">
                         <i className="bi bi-send-arrow-up-fill"></i>
                     </button>
                 </form>

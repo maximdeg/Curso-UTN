@@ -18,5 +18,5 @@
 
 body {
     display: flex;
-    background-image: url("./images/background-black.jpg");
+    background-image: url("/images/background-black.jpg");
 }

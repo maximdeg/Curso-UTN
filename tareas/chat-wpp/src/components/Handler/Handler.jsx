@@ -12,6 +12,7 @@ function Handler() {
         e.preventDefault();
         console.log("Sent", formValues);
         setNewMessageList([...newMessageList, formValues]);
+        
     };
 
     return (

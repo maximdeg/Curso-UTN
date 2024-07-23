@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import { Detail, Home, Cart } from "./Pages";
+import { Detail, Home, Cart, NewProduct } from "./Pages";
 
 function App() {
     return (
@@ -14,9 +14,10 @@ function App() {
                     </>
                 }
             />
-            <Route path="/cart" element={<Cart></Cart>} />
-            <Route path="/detail/:producto_id" element={<Detail></Detail>} />
             <Route path="/home" element={<Home></Home>} />
+            <Route path="/product/new" element={<NewProduct></NewProduct>} />
+            <Route path="/detail/:producto_id" element={<Detail></Detail>} />
+            <Route path="/cart" element={<Cart></Cart>} />
         </Routes>
     );
 }

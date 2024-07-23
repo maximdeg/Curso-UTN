@@ -7,13 +7,12 @@ function ProductCard({ producto }) {
 
     return (
         <div>
+            <hr />
             <h2>{nombre}</h2>
             <p>{descripcion}</p>
             <p>Precio: {precio}</p>
             <p>Cantidad: {stock}</p>
-
             <Link to={"/detail/" + id}>Ver detalles</Link>
-            <hr />
         </div>
     );
 }

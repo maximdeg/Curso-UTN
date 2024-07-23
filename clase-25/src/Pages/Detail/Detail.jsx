@@ -1,14 +1,13 @@
-import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { obtenerProductoPorId } from "../../helpers/productos";
+import { getProductById } from "../../helpers/productos";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Details() {
     const parametros = useParams();
-
-    console.log(parametros);
+    const { handleDeleteProduct } = useGlobalContext();
 
     const { nombre, descripcion, precio, id, stock, codigo, categoria } =
-        obtenerProductoPorId(parametros.producto_id);
+        getProductById(parametros.producto_id);
 
     return (
         <div>
@@ -21,6 +20,9 @@ function Details() {
             <p>Categoria: {categoria}</p>
             <button>
                 <Link to={"/home"}>Volver</Link>
+            </button>
+            <button onClick={() => handleDeleteProduct(parametros.producto_id)}>
+                Eliminar
             </button>
             <button>Comprar</button>
         </div>

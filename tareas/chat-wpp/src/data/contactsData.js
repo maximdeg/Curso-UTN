@@ -106,4 +106,3 @@ export const DATA_CONTACTS = [
     },
 ];
 
-export const DATA_MOOK = [];

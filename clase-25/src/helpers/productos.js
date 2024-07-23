@@ -15,19 +15,19 @@ export const obtenerProductoPorId = (id) => {
  *
  * @return {Array} The products retrieved from localStorage or the 'productos' array.
  */
+export const saveProductsToLocalStorage = (products) => {
+    const productsJSON = JSON.stringify(products);
+    localStorage.setItem("products", productsJSON);
+};
+
 export const getProducts = () => {
     const saved_products = localStorage.getItem("products");
     if (saved_products) {
         return JSON.parse(saved_products);
     } else {
-        const productsJSON = JSON.stringify(productos);
-        localStorage.setItem("products", productsJSON);
+        saveProductsToLocalStorage(productos);
         return productos;
     }
-};
-export const saveProductsToLocalStorage = (products) => {
-    const productsJSON = JSON.stringify(products);
-    localStorage.setItem("products", productsJSON);
 };
 
 export const createProduct = (newProduct) => {
@@ -35,7 +35,6 @@ export const createProduct = (newProduct) => {
     products.push(newProduct);
     saveProductsToLocalStorage(products);
 };
-
 
 export const getProductById = (id) => {
     const productsList = getProducts();
@@ -47,7 +46,6 @@ export const getProductById = (id) => {
         return null;
     }
 };
-
 
 export const deleteProductById = (id) => {
     const productsList = getProducts();

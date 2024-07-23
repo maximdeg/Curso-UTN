@@ -10,11 +10,18 @@
     background-color: var(--bg-message-color-right);
 }
 
-.contact-card-container .contact-card-picture img {
+.contact-card-container .contact-card-picture {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contact-card-container .contact-card-picture img {
+    width: 80%;
 }
 
 .contact-card-container .contact-card-name span {

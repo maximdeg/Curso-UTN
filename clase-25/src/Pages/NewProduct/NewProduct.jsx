@@ -11,7 +11,7 @@ function NewProduct() {
     let Message;
 
     const initialStateForm = {
-        id:"",
+        id: handleGetNewId(),
         nombre: "",
         descripcion: "",
         precio: "",

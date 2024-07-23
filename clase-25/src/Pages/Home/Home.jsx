@@ -17,6 +17,9 @@ function Home() {
             <Link to={"/product/new"}>
                 <h1>Crear nuevo producto</h1>
             </Link>
+            <Link to={"/login"}>
+                <h2>Carrito</h2>
+            </Link>
             <h1>Elige nuestros productos</h1>
             <ProductList productos={productos}></ProductList>
         </div>

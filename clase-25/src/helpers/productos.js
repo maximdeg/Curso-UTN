@@ -1,4 +1,4 @@
-import { productos } from "../data/productData";
+import { productos, AVIALABLE_CATEGORIES } from "../data/productData";
 
 /**
  * Finds and returns a product by its ID.
@@ -36,23 +36,37 @@ export const createProduct = (newProduct) => {
     saveProductsToLocalStorage(products);
 };
 
+// export const getProductById = (id) => {
+//     const productsList = getProducts();
+//     if (productsList) {
+//         return productsList.find((product) => {
+//             Number(product.id) === Number(id);
+//             console.log(Number(product.id) === Number(id));
+//         });
+//     } else {
+//         return null;
+//     }
+// };
+
 export const getProductById = (id) => {
     const productsList = getProducts();
-    if (productsList) {
-        return productsList.find(
-            (product) => Number(product.id) === Number(id)
-        );
-    } else {
-        return null;
-    }
+    const prod = productsList.find((product) => {
+        // console.log(product.id == id);
+        return product.id == id;
+    });
+    return prod;
 };
 
 export const deleteProductById = (id) => {
     const productsList = getProducts();
     const newProductsList = productsList.filter((product) => {
-        return Number(product.id) !== Number(id);
+        return product.id !== id;
     });
     saveProductsToLocalStorage(newProductsList);
 
-    console.log("Product deleted", newProductsList);
+    console.log("Product deleted");
 };
+
+export const getAvailableCategories = () => {
+    return AVIALABLE_CATEGORIES;
+}

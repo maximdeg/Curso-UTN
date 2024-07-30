@@ -4,22 +4,32 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Home() {
-    // const productList = getProducts();
-    // console.log(productList);
-
-    const { getProducts } = useGlobalContext();
-    const productos = getProducts();
+    const { getUser, logout, handleChangeSearchTerm, searchTerm, productos } =
+        useGlobalContext();
+    // const productos = getProducts();
+    const user = getUser();
 
     console.log("HOME/PRODUCTOS", productos);
 
     return (
         <div>
-            <Link to={"/product/new"}>
-                <h1>Crear nuevo producto</h1>
-            </Link>
-            <Link to={"/login"}>
-                <h2>Carrito</h2>
-            </Link>
+            {user ? (
+                <button onClick={logout}>Cerrar sesion</button>
+            ) : (
+                <Link to={"/login"}>Login</Link>
+            )}
+            {user && user.role === "admin" && (
+                <>
+                    <Link to={"/product/new"}>Crear producto</Link>
+                    <Link to={"/cart"}>Carrito</Link>
+                </>
+            )}
+            {user && user.role === "user" && (
+                <>
+                    <Link to={"/cart"}>Carrito</Link>
+                </>
+            )}
+            <input onChange={handleChangeSearchTerm} value={searchTerm} />
             <h1>Elige nuestros productos</h1>
             <ProductList productos={productos}></ProductList>
         </div>

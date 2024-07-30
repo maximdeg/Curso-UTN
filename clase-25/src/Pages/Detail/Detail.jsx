@@ -3,11 +3,12 @@ import { getProductById } from "../../helpers/productos";
 import { useGlobalContext } from "../../Context/GlobalContext";
 
 function Details() {
-    const parametros = useParams();
+    const params = useParams();
     const { handleDeleteProduct } = useGlobalContext();
+    // const producto = getProductById(params.product_id);
 
-    const { nombre, descripcion, precio, id, stock, codigo, categoria } =
-        getProductById(parametros.producto_id);
+    const { nombre, descripcion, precio, stock, codigo, categoria } =
+        getProductById(params.product_id);
 
     return (
         <div>
@@ -21,10 +22,10 @@ function Details() {
             <button>
                 <Link to={"/home"}>Volver</Link>
             </button>
-            <button onClick={() => handleDeleteProduct(parametros.producto_id)}>
+            <button onClick={() => handleDeleteProduct(params.product_id)}>
                 Eliminar
             </button>
-            <button>Comprar</button>
+            <button>Agregar al carrito</button>
         </div>
     );
 }

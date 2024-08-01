@@ -1,8 +1,9 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context/GlobalContext';
 import ChannelList from '../../components/ChannelList/ChannelList';
 import MessageList from '../../components/MessageList/MessageList';
+import MessageInput from '../../components/MessageInput/MessageInput';
 
 function Workspace() {
     const { id_workspace, id_channel } = useParams();
@@ -17,13 +18,27 @@ function Workspace() {
     return (
         <>
             <header>
-                <h1>{workspace.name}</h1>
+                <div>
+                    <h1>{workspace.name}</h1>
+                </div>
+                <div>
+                    <Link to={'/'}>
+                        <button>Salir</button>
+                    </Link>
+                </div>
             </header>
 
             <aside>
-                <h2>Canales</h2>
-                <ChannelList channels={channels} />
-                <button>Crear canal</button>
+                <div>
+                    <h2>Canales</h2>
+                    <ChannelList channels={channels} />
+                    <button>Crear canal</button>
+                </div>
+                <div>
+                    <input type="text" />
+                    <button> Confirmar </button>
+                    <button> Cancelar </button>
+                </div>
             </aside>
 
             <main>
@@ -31,6 +46,7 @@ function Workspace() {
                     <h2>{selectedChannel.name}</h2>
                 </div>
                 <MessageList messages={selectedChannel.messages} />
+                <MessageInput />
             </main>
         </>
     );

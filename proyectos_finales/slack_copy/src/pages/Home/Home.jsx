@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context/GlobalContext';
 import WorkspaceList from '../../components/WorkspaceList/WorkspaceList';
 function Home() {
@@ -20,7 +21,9 @@ function Home() {
                     </div>
                 </div>
                 <div>
-                    <button>Crear entorno</button>
+                    <Link to={'/workspace/new'}>
+                        <button>Crear entorno</button>
+                    </Link>
                 </div>
             </section>
         </main>

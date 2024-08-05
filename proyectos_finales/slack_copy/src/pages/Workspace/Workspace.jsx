@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { useParams, Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context/GlobalContext';
+import Header from '../../components/Header/Header';
 import ChannelList from '../../components/ChannelList/ChannelList';
 import MessageList from '../../components/MessageList/MessageList';
+import WorkspaceNavigator from '../../components/WorkspaceNavigator/WorkspaceNavigator';
 import './Workspace.css';
 
 function Workspace() {
@@ -42,37 +44,29 @@ function Workspace() {
 
     return (
         <>
-            <header className="header">
-                <div className="name-container">
-                    <h1>{workspace.workspace_name}</h1>
-                </div>
-                <nav className="header-navigator">
-                    <div className="btn-exit-container">
-                        <Link to={'/'}>
-                            <button className="btn-exit">Salir</button>
-                        </Link>
-                    </div>
-                </nav>
-            </header>
+            <Header workspace_name={workspace.workspace_name} />
             <section className="workspace-container">
-                <aside className="aside">
-                    <nav className="aside-navigator">
-                        <div className="channels-container">
-                            <h2>Canales</h2>
-                            <ChannelList id_workspace={id_workspace} channels={channels} />
-                            <button>Crear canal</button>
-                        </div>
-                        <AddChannelForm handleSubmitChannel={handleSubmitChannel} />
-                    </nav>
-                </aside>
-
-                <main className="main">
-                    <div>
-                        <h2>{currentChannel.name}</h2>
+                <WorkspaceNavigator />
+                <div className="main">
+                    <div className="main-navigator">
+                        <nav className="channel-navigator">
+                            <div className="channels-container">
+                                <h2>Canales</h2>
+                                <ChannelList id_workspace={id_workspace} channels={channels} />
+                                <button>Crear canal</button>
+                            </div>
+                            <AddChannelForm handleSubmitChannel={handleSubmitChannel} />
+                        </nav>
                     </div>
-                    <MessageList messages={currentChannel.messages} />
-                    <MessageInput handleSubmitMessage={handleSubmitMessage} />
-                </main>
+
+                    <div className="chat-container">
+                        <div>
+                            <h2>{currentChannel.name}</h2>
+                        </div>
+                        <MessageList messages={currentChannel.messages} />
+                        <MessageInput handleSubmitMessage={handleSubmitMessage} />
+                    </div>
+                </div>
             </section>
         </>
     );

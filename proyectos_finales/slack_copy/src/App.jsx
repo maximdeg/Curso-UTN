@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
+import './global.css';
 import Home from './pages/Home/Home.jsx';
 import Workspace from './pages/Workspace/Workspace.jsx';
 import NewWorkspace from './pages/NewWorkspace/NewWorkspace.jsx';

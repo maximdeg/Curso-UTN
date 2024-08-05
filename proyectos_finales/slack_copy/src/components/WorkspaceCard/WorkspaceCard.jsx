@@ -5,7 +5,7 @@ function WorkspaceCard({ workspace }) {
     return (
         <div>
             <Link to={'/workspace/' + workspace.id + '/' + workspace.channels[0].id}>
-                <h6>{workspace.name}</h6>
+                <h6>{workspace.workspace_name}</h6>
             </Link>
         </div>
     );

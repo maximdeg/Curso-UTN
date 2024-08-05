@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context/GlobalContext';
 import WorkspaceList from '../../components/WorkspaceList/WorkspaceList';
-function Home() {
-    const { getWorkspaces } = useGlobalContext();
-    const workspaceList = getWorkspaces();
 
+function Home() {
+    const { getWorkspaces} = useGlobalContext();
+    const workspaceList = getWorkspaces();
+    
     return (
         <main>
             <section>

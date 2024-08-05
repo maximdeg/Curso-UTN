@@ -3,7 +3,7 @@ import MessageCard from '../MessageCard/MessageCard';
 
 function MessageList({ messages }) {
     return (
-        <div>
+        <div className="message-list-container">
             {messages.map((message, index) => (
                 <div key={index}>
                     <MessageCard message={message} />

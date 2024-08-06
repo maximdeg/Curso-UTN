@@ -1,6 +1,8 @@
 import React from 'react';
 import MessageCard from '../MessageCard/MessageCard';
 
+import './MessageList.css';
+
 function MessageList({ messages }) {
     return (
         <div className="message-list-container">

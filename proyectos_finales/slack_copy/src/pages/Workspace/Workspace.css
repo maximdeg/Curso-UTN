@@ -1,9 +1,10 @@
 .workspace-container {
     display: flex;
     flex-direction: row;
+    padding: 2px;
     width: 100%;
-    height: 100%;
-    gap: 20px;
+    height: 100vh;
+    background-color: var(--bg-primary-color);
 }
 
 .workspace-container .main {
@@ -13,15 +14,145 @@
     height: 100%;
 }
 
-/* CHANNEL NAVIGATOR*/
+/* CHANNEL MAIN NAVIGATOR */
 
 .workspace-container .main-navigator {
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 87vh;
+    color: var(--text-primary-color);
+    width: 25%;
+    height: 93vh;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary-color);
+}
+
+.workspace-container .main-navigator .channel-navigator {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.workspace-container .main-navigator .channel-navigator .workspace-name-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px 10px 20px;
+    color: var(--text-secondary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.workspace-container .main-navigator .channel-navigator .channel-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     overflow: auto;
-    border: 1px solid white;
+    padding: 10px 20px 10px 20px;
+}
+
+.button {
+    font-size: 16px;
+    color: var(--text-secondary-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--bg-tertiary-color);
+}
+
+.btn-create-channel {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 0px 1px var(--icon-color);
+    background-color: var(--bg-secondary-color);
+}
+
+/* CREATE CHANNEL CONTAINER FORM */
+
+.workspace-container .main-navigator .channel-navigator .create-channel-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 90%;
+    height: 180px;
+    padding: 15px 20px 10px 20px;
+    border-radius: 7px;
+    border: 1px solid var(--border-color);
+}
+
+.workspace-container .main-navigator .channel-navigator .create-channel-container .create-channel-title {
+    font-size: 21px;
+}
+
+.workspace-container .main-navigator .channel-navigator .create-channel-container .create-channel-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px 10px 0px;
+}
+
+.workspace-container .main-navigator .channel-navigator .create-channel-container .create-channel-form .label {
+    font-size: 15px;
+}
+
+.workspace-container .main-navigator .channel-navigator .create-channel-container .create-channel-form .input-channel {
+    width: 100%;
+    height: 24px;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    padding-left: 5px;
+    margin-top: 3px;
+    border: none;
+    box-sizing: border-box;
+    background-color: var(--bg-tertiary-color);
+}
+
+.workspace-container
+    .main-navigator
+    .channel-navigator
+    .create-channel-container
+    .create-channel-form
+    .input-channel::placeholder {
+    color: var(--icon-color);
+}
+
+.workspace-container
+    .main-navigator
+    .channel-navigator
+    .create-channel-container
+    .create-channel-form
+    .input-channel:focus {
+    outline: none;
+}
+
+.workspace-container .main-navigator .channel-navigator .create-channel-container .create-channel-form .btn-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.workspace-container
+    .main-navigator
+    .channel-navigator
+    .create-channel-container
+    .create-channel-form
+    .btn-container
+    .btn-create {
+    align-items: center;
+    width: 45%;
 }
 
 /* CHAT SECTION */
@@ -29,31 +160,54 @@
 .workspace-container .chat-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 80%;
-    height: 87vh;
+    justify-content: flex-start;
+    width: 75%;
+    height: 93vh;
     overflow: auto;
-    border: 1px solid white;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-radius: 0px 5px 5px 0px;
+}
+
+.workspace-container .chat-container .workspace-channel-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px 10px 20px;
+    color: var(--text-secondary-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .workspace-container .chat-container .form-container {
     display: flex;
-    width: 100%;
-    height: 10vh;
-    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 97%;
+    height: 200px;
+    align-self: center;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.959);
 }
 
 .workspace-container .chat-container .form-container .input-form {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
 }
 
 .workspace-container .chat-container .form-container .input-form .input {
     display: flex;
+    background-color: var(--bg-input-chat-color);
     padding-left: 10px;
-    width: 90%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
 }
+
+.workspace-container .chat-container .form-container .input-form .input:focus {
+    outline: none;
+}
+
+

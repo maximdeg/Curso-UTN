@@ -12,7 +12,11 @@ function WorkspaceNavigator() {
 
     const WorkspacesNav = workspaces.map((workspace) => {
         return (
-            <Link to={'/workspace/' + workspace.id + '/' + workspace.channels[0].id} className="link">
+            <Link
+                key={workspace.id}
+                to={'/workspace/' + workspace.id + '/' + workspace.channels[0].id}
+                className="link"
+            >
                 <div className="workspace-squares">
                     <span className="initials-span">
                         {workspace.workspace_name[0].toUpperCase()}

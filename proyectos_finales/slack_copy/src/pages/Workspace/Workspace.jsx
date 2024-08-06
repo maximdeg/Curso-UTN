@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { useParams, Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context/GlobalContext';
+import { IoSend } from 'react-icons/io5';
 import Header from '../../components/Header/Header';
 import ChannelList from '../../components/ChannelList/ChannelList';
 import MessageList from '../../components/MessageList/MessageList';
 import WorkspaceNavigator from '../../components/WorkspaceNavigator/WorkspaceNavigator';
+
 import './Workspace.css';
 
 function Workspace() {
@@ -49,19 +51,22 @@ function Workspace() {
                 <WorkspaceNavigator />
                 <div className="main">
                     <div className="main-navigator">
-                        <nav className="channel-navigator">
-                            <div className="channels-container">
-                                <h2>Canales</h2>
+                        <div className="channel-navigator">
+                            <div className="workspace-name-container">
+                                <h3>{workspace.workspace_name}</h3>
+                            </div>
+                            <div className="channel-container">
+                                <h4>Canales</h4>
                                 <ChannelList id_workspace={id_workspace} channels={channels} />
-                                <button>Crear canal</button>
+                                <button className="button btn-create-channel">Crear canal</button>
                             </div>
                             <AddChannelForm handleSubmitChannel={handleSubmitChannel} />
-                        </nav>
+                        </div>
                     </div>
 
                     <div className="chat-container">
-                        <div>
-                            <h2>{currentChannel.name}</h2>
+                        <div className="workspace-channel-container">
+                            <h2># {currentChannel.channel_name}</h2>
                         </div>
                         <MessageList messages={currentChannel.messages} />
                         <MessageInput handleSubmitMessage={handleSubmitMessage} />
@@ -69,6 +74,51 @@ function Workspace() {
                 </div>
             </section>
         </>
+    );
+}
+
+function AddChannelForm({ handleSubmitChannel }) {
+    const initialStateChannel = {
+        id: '',
+        channel_name: '',
+        messages: [],
+    };
+
+    const [channelValue, setChannelValue] = useState(initialStateChannel);
+
+    const handleContentChange = (e) => {
+        setChannelValue({
+            ...channelValue,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    return (
+        <div className="create-channel-container">
+            <h3 className="create-channel-title">Añadir canal</h3>
+            <form className="create-channel-form" onSubmit={(e) => handleSubmitChannel(e, { ...channelValue })}>
+                <label className="label" htmlFor="name">
+                    Nombre del canal
+                </label>
+                <input
+                    className="input input-channel"
+                    type={channelValue.name}
+                    id="channel-name"
+                    name="channel_name"
+                    onChange={handleContentChange}
+                    value={channelValue.name}
+                    placeholder="Nuevo canal..."
+                />
+                <div className="btn-container">
+                    <button className="button btn-create btn-cancel-channel" type="cancel">
+                        Cancelar
+                    </button>
+                    <button className="button btn-create btn-confirm-channel" type="submit">
+                        Confirmar
+                    </button>
+                </div>
+            </form>
+        </div>
     );
 }
 
@@ -113,47 +163,8 @@ function MessageInput({ handleSubmitMessage }) {
                     placeholder="Escribe aqui un mensaje..."
                 ></input>
                 <button className="btn-submit" type="submit">
-                    Enviar
+                    <IoSend />
                 </button>
-            </form>
-        </div>
-    );
-}
-
-function AddChannelForm({ handleSubmitChannel }) {
-    const initialStateChannel = {
-        id: '',
-        channel_name: '',
-        messages: [],
-    };
-
-    const [channelValue, setChannelValue] = useState(initialStateChannel);
-
-    const handleContentChange = (e) => {
-        setChannelValue({
-            ...channelValue,
-            [e.target.name]: e.target.value,
-        });
-    };
-
-    return (
-        <div className="add-channel-container">
-            <h3>Añadir canal</h3>
-            <form className="add-channel-form" onSubmit={(e) => handleSubmitChannel(e, { ...channelValue })}>
-                <label htmlFor="name">Nombre del canal</label>
-                <input
-                    className="input input-channel"
-                    type={channelValue.name}
-                    id="channel-name"
-                    name="channel_name"
-                    onChange={handleContentChange}
-                    value={channelValue.name}
-                    placeholder="Nuevo canal..."
-                />
-                <div>
-                    <button type="submit"> Confirmar </button>
-                    <button type="cancel"> Cancelar </button>
-                </div>
             </form>
         </div>
     );

@@ -8,8 +8,13 @@
     --bg-primary-color: #1e2125;
     --bg-secondary-color: #16191b;
     --bg-tertiary-color: #5d5e60;
+    --bg-input-chat-color: #222529;
     --icon-color: #f8f8f8;
     --square-color: #b0b0b0;
+    --text-primary-color: #acacad;
+    --text-secondary-color: white;
+    --border-color: #6159599a;
+
 }
 
 * {
@@ -19,3 +24,5 @@
     font-family: 'Lato', sans-serif;
     /* background-color: var(--bg-primary-color); */
 }
+
+
